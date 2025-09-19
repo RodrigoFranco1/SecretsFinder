@@ -1,0 +1,44 @@
+{
+  "name": "secretfinder-caido",
+  "version": "1.0.0",
+  "description": "Advanced secret and sensitive data detection plugin for Caido",
+  "main": "dist/backend/script.js",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "package": "npm run build && caido-dev package",
+    "install-plugin": "npm run package && cp dist/plugin_package.zip ~/Desktop/",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "caido",
+    "plugin",
+    "security",
+    "secrets",
+    "api-keys",
+    "scanner",
+    "pentest"
+  ],
+  "author": {
+    "name": "SecScanTeam",
+    "email": "dev@secscan.io"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0"
+  },
+  "peerDependencies": {
+    "caido:plugin": "*",
+    "caido:frontend": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/secscan/secretfinder-caido.git"
+  },
+  "bugs": {
+    "url": "https://github.com/secscan/secretfinder-caido/issues"
+  },
+  "homepage": "https://github.com/secscan/secretfinder-caido#readme"
+}
